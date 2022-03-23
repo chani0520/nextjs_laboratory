@@ -32,3 +32,54 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## history
+
+### 2022-03-23
+
+1. AOS library 추가
+
+1) install library
+
+```bash
+npm install --save @types/aos aos
+```
+
+2. `_app.tsx`에 import
+
+```typescript
+import type { AppProps } from 'next/app';
+import AOS from 'aos'; // added
+
+import '../styles/globals.css';
+import 'aos/dist/aos.css'; // added
+import { useEffect } from 'react'; // added
+
+function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      disable: 'phone',
+      duration: 700,
+      easing: 'ease-out-cubic',
+    });
+  }, []);
+
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;
+```
+
+3. index.tsx에서 테스트 해보기
+
+- AOS 공식 홈페이지 : [AOS](https://michalsnik.github.io/aos/)
+
+- 참고 github : [ BrunoS3D / nextjs-with-aos-example](https://github.com/BrunoS3D/nextjs-with-aos-example)
+
+```typescript
+// data-aos & data-aos-delay 속성을 줌으로서 각각의 요소가 어떻게 나올지를 설정할수 있고, delay로는 시간차도 줄수 있다.
+<h1 className={styles.title} data-aos='fade-up' data-aos-delay='700'>
+  Welcome to <a href='https://nextjs.org'>Next.js!</a>
+</h1>
+```
