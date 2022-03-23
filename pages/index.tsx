@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +25,16 @@ const Home: NextPage = () => {
         >
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
+          <ul>
+            <li>
+              🎃 User page {'=> '}
+              <Link href='/users'>
+                <a>
+                  <code className={styles.code}>/users</code>
+                </a>
+              </Link>
+            </li>
+          </ul>
         </p>
 
         <div className={styles.grid}>

@@ -73,7 +73,8 @@ export default MyApp;
 
 - AOS 공식 홈페이지 : [AOS](https://michalsnik.github.io/aos/)
 
-- 참고 github : [ BrunoS3D / nextjs-with-aos-example](https://github.com/BrunoS3D/nextjs-with-aos-example)
+- 참고 github : [BrunoS3D / nextjs-with-aos-example](https://github.com/BrunoS3D/nextjs-with-aos-example)
+- 참고 github : [cruip / tailwind-landing-page-template](https://github.com/cruip/tailwind-landing-page-template/blob/main/src/partials/Footer.jsx)
 
 ```typescript
 // data-aos & data-aos-delay 속성을 줌으로서 각각의 요소가 어떻게 나올지를 설정할수 있고, delay로는 시간차도 줄수 있다.
