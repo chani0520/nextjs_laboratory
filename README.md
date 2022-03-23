@@ -37,15 +37,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ### 2022-03-23
 
-1. AOS library 추가
-
-1) install library
+#### 1. AOS library 추가 ( typescript사용시 @types/aos도 설치해야 오류 메세지 출력 안됨 )
 
 ```bash
 npm install --save @types/aos aos
 ```
 
-2. `_app.tsx`에 import
+#### 2. `_app.tsx`에 import
 
 ```typescript
 import type { AppProps } from 'next/app';
@@ -71,7 +69,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 export default MyApp;
 ```
 
-3. index.tsx에서 테스트 해보기
+#### 3. index.tsx에서 테스트 해보기
 
 - AOS 공식 홈페이지 : [AOS](https://michalsnik.github.io/aos/)
 
