@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 const Apitest = ({ data }: AxiosResponse) => {
   const [value, setValue] = useState('');
@@ -13,9 +14,16 @@ const Apitest = ({ data }: AxiosResponse) => {
   };
 
   return (
-    <div className='text-center'>
+    <div className={styles.main}>
       <h1 className='text-3xl font-bold text-center my-2'>Api Test page</h1>
       <p>( Next.js(3000port) {'<->'} Nest.js(4000port) )</p>
+      <Link href={'/'}>
+        <a>
+          <button className='p-1 m-2 bg-blue-400 rounded text-white'>
+            Go Home
+          </button>
+        </a>
+      </Link>
       <p className={styles.code}>src directory : /pages/apitest.tsx</p>
 
       <div className='py-2'>

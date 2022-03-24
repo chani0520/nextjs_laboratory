@@ -1,11 +1,19 @@
 import React from 'react';
 import axios from 'axios';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 const Users = ({ users }: any) => {
   return (
-    <div className='text-center'>
+    <div className={styles.main}>
       <h1 className='text-3xl font-bold text-center my-2'>Users page</h1>
+      <Link href={'/'}>
+        <a>
+          <button className='p-1 m-2 bg-blue-400 rounded text-white'>
+            Go Home
+          </button>
+        </a>
+      </Link>
       <p className={styles.code}>directory : /pages/users.tsx</p>
       <ul className='text-center pt-5'>
         {users.map((user: any) => (
