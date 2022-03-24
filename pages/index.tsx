@@ -14,8 +14,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title} data-aos='fade-up' data-aos-delay='700'>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
+        {/* <h1 className={styles.title} data-aos='fade-up' data-aos-delay='700'>
+          Welcome to{' '}
+          <a href='https://nextjs.org'>
+            <span className='test-3xl font-bold underline'>Next.js!</span>
+          </a>
         </h1>
 
         <p
@@ -25,19 +28,29 @@ const Home: NextPage = () => {
         >
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
-          <ul>
-            <li>
-              🎃 User page {'=> '}
-              <Link href='/users'>
-                <a>
-                  <code className={styles.code}>/users</code>
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </p>
+        </p> */}
 
-        <div className={styles.grid}>
+        <ul className='my-5' data-aos='fade-up'>
+          <li>
+            🎃 User page {'=> '}
+            <Link href='/users'>
+              <a>
+                <code className={styles.code}>/users</code>
+              </a>
+            </Link>
+          </li>
+          <div className='py-2' />
+          <li>
+            🎃 API test page ( call from 3000port to 4000port ) {'=> '}
+            <Link href='/apitest'>
+              <a>
+                <code className={styles.code}>/apitest</code>
+              </a>
+            </Link>
+          </li>
+        </ul>
+
+        {/* <div className={styles.grid}>
           <a
             href='https://nextjs.org/docs'
             className={styles.card}
@@ -79,10 +92,10 @@ const Home: NextPage = () => {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <a
           href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
           target='_blank'
@@ -93,7 +106,7 @@ const Home: NextPage = () => {
             <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
           </span>
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 };

@@ -1,11 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+import styles from '../styles/Home.module.css';
 
 const Users = ({ users }: any) => {
   return (
-    <div>
-      <h1>Users page</h1>
-      <ul>
+    <div className='text-center'>
+      <h1 className='text-3xl font-bold text-center my-2'>Users page</h1>
+      <p className={styles.code}>directory : /pages/users.tsx</p>
+      <ul className='text-center pt-5'>
         {users.map((user: any) => (
           <li key={user.id}>
             {user.name} : {user.email}
