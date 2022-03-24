@@ -82,3 +82,19 @@ export default MyApp;
   Welcome to <a href='https://nextjs.org'>Next.js!</a>
 </h1>
 ```
+
+### 2022-03-24
+
+#### 1. API TEST 중...
+
+- Nest.js를 4000port에서 실행시킨 뒤, 클라이언트(3000port)에서 request를 제대로 보내고, response를 제대로 받는지 테스트 중
+
+- `http://localhost:3000/apitest` => `http://localhost:4000/`
+
+1. pre-render시, getStaticProps() 함수 테스트
+
+2. 특정 버튼 클릭시, axios로 요청 보낸 뒤 정상적으로 데이터 받아오는지 테스트
+
+- 버튼 클릭시 axios호출까지는 잘 됬지만, Nest.js에서 CORS 설정이 안되있어 오류가 발생했다.
+
+- `nest.js /src/main.ts`에서 `app.enableCors()`로 수정한 뒤 요청을 다시 보내니까 해결
