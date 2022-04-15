@@ -3,8 +3,22 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
+import Portal from '../components/hoc/Portal';
+import Modal from '../components/hoc/Modal';
 
 const Home: NextPage = () => {
+  const onClickLoginBtn = () => {
+    console.log('🔫 로그인 버튼 클릭!');
+
+    return (
+      // <Portal selector='#portal'>
+      {
+        /* <Modal {...props} /> */
+      }
+      // </Portal>
+    );
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -43,6 +57,36 @@ const Home: NextPage = () => {
               </a>
             </Link>
           </li>
+          <div className='py-2' />
+
+          <li>
+            🎃 Chatting page (테스트 중...) {'=> '}
+            <Link href='/chatting'>
+              <a>
+                <code className={styles.code}>/chatting</code>
+              </a>
+            </Link>
+          </li>
+
+          <li>
+            🎃 Portal Btn test (테스트 중...) {'=> '}
+            <button
+              className='my-3 p-1 bg-blue-300 text-white rounded-lg'
+              onClick={() => onClickLoginBtn()}
+            >
+              Login
+            </button>
+          </li>
+
+          <li>
+            🎃 React-Calendar {'=> '}
+            <Link href='/calendar'>
+              <a>
+                <code className={styles.code}>/calendar</code>
+              </a>
+            </Link>
+          </li>
+          <div className='py-2' />
         </ul>
       </main>
     </div>

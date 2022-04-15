@@ -1,4 +1,10 @@
-import Document, { DocumentContext } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  DocumentContext,
+  NextScript,
+} from 'next/document';
 
 /**
  * 🔸 _document.tsx : _app.tsx 다음으로 실행되며, 공통적으로 사용할 <head> (ex. meta tag...)나 <body>태그 안에 들어갈 내용들을 custom할때 사용
@@ -10,6 +16,19 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx);
 
     return initialProps;
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head />
+        <body>
+          <div id='portal' />
+          <NextScript />
+          <Main />
+        </body>
+      </Html>
+    );
   }
 }
 
