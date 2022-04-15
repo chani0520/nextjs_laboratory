@@ -9,7 +9,7 @@ const CalendarComponent = () => {
   }, [date]);
 
   return (
-    <div className='pt-5'>
+    <div className='pt-5 w-fit h-fit'>
       <Calendar onChange={setDate} value={date} />
     </div>
   );

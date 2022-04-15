@@ -59,7 +59,7 @@ const Home: NextPage = () => {
           </li>
           <div className='py-2' />
 
-          <li>
+          <li className='text-red-400'>
             🎃 Chatting page (테스트 중...) {'=> '}
             <Link href='/chatting'>
               <a>
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
             </Link>
           </li>
 
-          <li>
+          <li className='text-red-400'>
             🎃 Portal Btn test (테스트 중...) {'=> '}
             <button
               className='my-3 p-1 bg-blue-300 text-white rounded-lg'
