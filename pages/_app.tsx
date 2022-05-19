@@ -5,6 +5,7 @@ import '../styles/globals.css';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import 'react-calendar/dist/Calendar.css';
+
 /**
  * 🔸 _app.tsx : 가장 먼저 실행되는 컴포넌트로, 페이지에 적용할 공통 레이아웃의 역할
  *

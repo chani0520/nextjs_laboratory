@@ -87,6 +87,16 @@ const Home: NextPage = () => {
             </Link>
           </li>
           <div className='py-2' />
+
+          <li>
+            🎃 Web Font {'=> '}
+            <Link href='/webfont'>
+              <a>
+                <code className={styles.code}>/webfont</code>
+              </a>
+            </Link>
+          </li>
+          <div className='py-2' />
         </ul>
       </main>
     </div>
