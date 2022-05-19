@@ -97,6 +97,16 @@ const Home: NextPage = () => {
             </Link>
           </li>
           <div className='py-2' />
+
+          <li>
+            🎃 PDF Viewer {'=> '}
+            <Link href='/pdfviewer'>
+              <a>
+                <code className={styles.code}>/pdfviewer</code>
+              </a>
+            </Link>
+          </li>
+          <div className='py-2' />
         </ul>
       </main>
     </div>
