@@ -4,6 +4,21 @@ import workerSrc from '../pdf-worker';
 
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
+const data = (
+  <div>
+    <div>Test</div>
+    <h1>H1</h1>
+
+    <hr />
+
+    <table>
+      <th>Table Head</th>
+      <td>Test1</td>
+      <td>Test2</td>
+    </table>
+  </div>
+);
+
 export default function PDFViewerComponent() {
   const [file, setFile] = useState('../testPDF.pdf');
   const [numPages, setNumPages] = useState(0);
