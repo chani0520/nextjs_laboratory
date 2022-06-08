@@ -107,6 +107,16 @@ const Home: NextPage = () => {
             </Link>
           </li>
           <div className='py-2' />
+
+          <li>
+            🎃 Login by NEXT-AUTH {'=> '}
+            <Link href='/login'>
+              <a>
+                <code className={styles.code}>/login</code>
+              </a>
+            </Link>
+          </li>
+          <div className='py-2' />
         </ul>
       </main>
     </div>

@@ -5,6 +5,7 @@ import '../styles/globals.css';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import 'react-calendar/dist/Calendar.css';
+import { SessionProvider } from 'next-auth/react';
 
 /**
  * 🔸 _app.tsx : 가장 먼저 실행되는 컴포넌트로, 페이지에 적용할 공통 레이아웃의 역할
@@ -14,14 +15,18 @@ import 'react-calendar/dist/Calendar.css';
  * - Component : 요청한 페이지
  * - pageProps : getInitialProps, getStaticProps, getServerSideProps 중 하나를 통해 가져온 초기 속성값
  */
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
   useEffect(() => {
     AOS.init({
       offset: 100,
     });
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <SessionProvider session={session}>
+      <Component {...pageProps} />
+    </SessionProvider>
+  );
 }
 
 export default MyApp;
